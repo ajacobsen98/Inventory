@@ -7,15 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.ListViewCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -28,15 +21,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.gerin.inventory.Search.CustomSuggestionsAdapter;
 import com.example.gerin.inventory.Search.RecyclerTouchListener;
 import com.example.gerin.inventory.Search.SearchAdapter;
 import com.example.gerin.inventory.Search.SearchResult;
 import com.example.gerin.inventory.data.ItemContract;
 import com.example.gerin.inventory.data.ItemDbHelper;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 import com.mancj.materialsearchbar.adapter.SuggestionsAdapter;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -263,17 +260,17 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
             }
         });
         // Doesn't work for custom adapters
-        materialSearchBar.setSuggstionsClickListener(new SuggestionsAdapter.OnItemViewClickListener() {
+	    materialSearchBar.setSuggestionsClickListener(new SuggestionsAdapter.OnItemViewClickListener() {
 
-            @Override
-            public void OnItemClickListener(int position, View v) {
-                Log.e("catalog", "on item click");
-                Log.e("on item click", String.valueOf(position));
-            }
+		    @Override
+		    public void OnItemClickListener(int position, View v) {
+			    Log.e("catalog", "on item click");
+			    Log.e("on item click", String.valueOf(position));
+		    }
 
-            @Override
-            public void OnItemDeleteListener(int position, View v) {
-                Log.e("catalog", "on item delete");
+		    @Override
+		    public void OnItemDeleteListener(int position, View v) {
+			    Log.e("catalog", "on item delete");
             }
         });
 

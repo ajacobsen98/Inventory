@@ -14,7 +14,7 @@
         android:id="@+id/splash_screen_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/inventory_logo" />
+        app:srcCompat="@drawable/inventory_logo" />
 
     <TextView
         android:id="@+id/splash_screen_name"

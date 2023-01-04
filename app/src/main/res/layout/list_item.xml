@@ -49,7 +49,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/quantity_icon"
+                        app:srcCompat="@drawable/quantity_icon"
                         android:tint="@color/colorAccent"
                         android:adjustViewBounds="true"
                         android:maxWidth="32dp"
@@ -88,7 +88,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/price_icon"
+                        app:srcCompat="@drawable/price_icon"
                         android:tint="@color/colorAccent"
                         android:adjustViewBounds="true"
                         android:maxWidth="32dp"
